@@ -20,14 +20,16 @@ int main()
     objSeccion->setHora("1800");
     objSeccion->setUV("5");
     
-    objSeccion->setCupos(3);
+    objSeccion->setCupos(5);
     objSeccion->Matricular(alumno1->getNombre());
-  
-    Listado=objSeccion->Listado();
-    cout << objSeccion->getNombre();
-    
+    objSeccion->Matricular(alumno2->getNombre());
+    objSeccion->Matricular(alumno3->getNombre());
 
-                                                                          
+    Listado=objSeccion->Listado();
+    cout << objSeccion->getNombre()<<endl;
+    cout<< objSeccion->getHora()<<endl;
+    
+    
 
     cout << endl << "======Con ciclo for=======";
     ptr=Listado;

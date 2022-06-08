@@ -1,8 +1,13 @@
 #include "Seccion.h"
 
-Seccion::Seccion(){
-    this->Cupos= 3;
-    this->Alumnos= new string[Cupos];
+Seccion::Seccion(int Cupos){
+    if (this->Alumnos==NULL)
+    {
+        this->Cupos=Cupos;
+        this->Alumnos= new string[Cupos];
+        this->Ultimo=-1;
+    }
+    
 }
 
 
@@ -14,6 +19,7 @@ bool Seccion::Matricular(string Alumno){
     if(Ultimo < (Cupos-1)){
         Alumnos[++Ultimo]= Alumno;
         return true;
+        
     }
     else{
         return false;
